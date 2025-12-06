@@ -73,7 +73,7 @@ function reiniciarJogo() {
   inputCor.disabled = false;
   btnAdivinhar.disabled = false;
   btnReiniciar.hidden = true;
-  document.body.style.backgroundColor = corFundoOriginal;
+  document.body.style.background = "radial-gradient(circle at 50% 50%, #add8e6, #8a2be2)";
   inputCor.focus();
   // console.log("Cor secreta:", corSecreta); // útil para testes
 }
@@ -87,6 +87,7 @@ function preencherListaCores() {
     span.classList.add("tag-cor");
     span.textContent = cor;
     listaCoresDiv.appendChild(span);
+    listaCoresDiv.appendChild(document.createElement("br"));
   });
 }
 
@@ -112,7 +113,7 @@ function lidarComAdivinhacao() {
   }
 
   if (palpite === corSecreta) {
-    document.body.style.backgroundColor = corSecreta;
+    document.body.style.background = corSecreta;
     exibirMensagem(
       `Parabéns! Você acertou! A cor era "${corSecreta}". 🎉`,
       "sucesso",
