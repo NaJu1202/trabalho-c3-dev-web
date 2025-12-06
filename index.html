@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jogo de Adivinhação de Cores</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Jogo de Adivinhação de Cores</h1>
+
+    <p class="instructions">
+      Eu escolhi uma cor secreta entre várias cores HTML 😈<br />
+      Você tem <strong>3 tentativas</strong> para adivinhar.<br />
+      Digite o nome da cor em inglês (ex: <em>red</em>, <em>blue</em>, <em>yellow</em>...).
+    </p>
+
+    <p id="tentativas-restantes" class="tentativas">
+      Tentativas restantes: <span id="tentativas-valor">3</span>
+    </p>
+
+    <div class="input-group">
+      <input
+        type="text"
+        id="input-cor"
+        placeholder="Digite o nome da cor (em inglês)"
+        autocomplete="off"
+      />
+      <button id="btn-adivinhar">Adivinhar</button>
+    </div>
+
+    <p id="mensagem" class="mensagem"></p>
+
+    <button id="btn-reiniciar" class="btn-reiniciar" hidden>
+      Jogar Novamente
+    </button>
+
+    <section class="cores-exemplo">
+      <h2>Cores possíveis</h2>
+      <p>Você pode usar cores como:</p>
+      <div class="lista-cores" id="lista-cores"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
